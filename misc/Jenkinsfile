@@ -13,7 +13,7 @@ node {
    }
    stage('docker build/push') {
      docker.withRegistry('https://index.docker.io/v1/', '3840aff7-6a8c-4e39-9718-189b914c1790') {
-       def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", '.').push()
+       def app = docker.build("26051992/jenkins-pipeline:${commit_id}", '.').push()
      }
    }
 }
